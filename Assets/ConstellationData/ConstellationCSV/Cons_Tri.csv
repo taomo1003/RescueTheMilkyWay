@@ -1,0 +1,55 @@
+Name,B,F,Var,HD,HIP,RA,Dec,"vis.
+mag.","abs.
+mag.",Dist. (ly),Sp. class,Notes
+β Tri,β,4,,13161,10064,02h 09m 32.52s,+34° 59′ 14.6″,3,0.09,124,A5III,"Deltotum, Deltoton; suspected variable"
+α Tri,α,2,,11443,8796,01h 53m 04.90s,+29° 34′ 45.8″,3.42,1.95,64,F6IV,"Mothallah, Metallah, Ras al Mothallah, Elmuthalleth, Caput Trianguli; rotating 
+ellipsoidal variable"
+γ Tri,γ,9,,14055,10670,02h 17m 18.84s,+33° 50′ 50.4″,4.03,1.24,118,A1Vnn,
+δ Tri,δ,8,,13974,10644,02h 17m 02.42s,+34° 13′ 29.4″,4.84,4.66,35,G0V,
+ι Tri,ι,6,TZ,13480,10280,02h 12m 22.32s,+30° 18′ 11.6″,4.94,0.08,305,F5V comp SB,"RS CVn variable, Δ*V* = 0.09m, *P* = 14.732 d"
+14 Tri,,14,,15656,11784,02h 32m 06.14s,+36° 08′ 50.0″,5.15,-0.25,391,K5III,"variable star, Δ*V* = 0.006m, *P* = 0.08576 d"
+7 Tri,,7,,13869,10559,02h 15m 56.30s,+33° 21′ 32.3″,5.25,0.48,293,A0V,
+10 Tri,,10,,14252,10793,02h 18m 56.99s,+28° 38′ 33.6″,5.29,0.13,350,A2V,
+12 Tri,,12,,15257,11486,02h 28m 09.99s,+29° 40′ 10.3″,5.29,1.9,155,F0III,
+15 Tri,,15,,16058,12086,02h 35m 46.80s,+34° 41′ 15.7″,5.38,,,M3III,"suspected slow irregular variable, Δ*V* = 0.14m"
+R Tri,,,R,16210,12193,02h 37m 02.50s,+34° 15′ 50.0″,5.4,,1299,M4IIIe,"Mira variable, *V*max = 5.4m, *V*min = 12.6m, *P* = 266.9 d"
+ε Tri,ε,3,,12471,9570,02h 02m 57.97s,+33° 17′ 02.9″,5.5,0.22,370,A2V,binary star
+11 Tri,,11,,15176,11432,02h 27m 27.79s,+31° 48′ 04.9″,5.55,0.83,286,K1III:,
+HD 10390,,,,10390,7943,01h 42m 03.45s,+35° 14′ 44.8″,5.63,1.13,259,B9IV-V,
+HD 11007,,,,11007,8433,01h 48m 41.68s,+32° 41′ 22.2″,5.78,3.6,89,F8V,
+HD 11928,,,,11928,9132,01h 57m 43.74s,+27° 48′ 16.3″,5.84,0.02,476,M2III,"variable star, Δ*V* = 0.013m, *P* = 50.65856 d"
+HD 15755,,,,15755,11840,02h 32m 52.66s,+34° 32′ 32.8″,5.84,1.33,260,K0III,
+13 Tri,,13,,15335,11548,02h 28m 48.54s,+29° 55′ 53.7″,5.89,3.45,100,G0V,
+HD 10348,,,,10348,7906,01h 41m 39.24s,+30° 02′ 49.7″,5.97,-0.06,523,K0III,
+HD 16187,,,,16187,12160,02h 36m 43.05s,+31° 36′ 27.6″,6.07,0.36,452,K0,
+HD 16220,,,,16220,12200,02h 37m 06.51s,+32° 53′ 27.7″,6.23,2.52,180,F8V,
+5 Tri,,5,,13372,10220,02h 11m 25.00s,+31° 31′ 35.1″,6.24,0.39,482,A1m,
+HD 15464,,,,15464,11651,02h 30m 16.56s,+33° 50′ 01.8″,6.26,0.98,371,K1III,"variable star, Δ*V* = 0.005m, *P* = 0.26973 d"
+HD 10588,,,,10588,8086,01h 43m 50.15s,+32° 11′ 31.2″,6.32,0.57,460,G8III-IV SB,
+HD 13747,,,,13747,10446,02h 14m 37.88s,+28° 41′ 29.1″,6.35,2.48,194,K1III,
+HD 9298,,,,9298,7147,01h 32m 07.58s,+34° 47′ 59.9″,6.39,-0.9,937,B7IIIMNp...,
+HD 13189,,,,13189,10085,02h 09m 40.17s,+32° 18′ 59.2″,7.57,1.23,602,K3II,has a planet or a brown dwarf companion (b)
+HD 9446,,,,9446,7245,01h 33m 20.18s,+29° 15′ 54.5″,8.35,4.74,172,G5V,has two planets (b & c)
+HD 12545,,,XX,12545,9630,02h 03m 47.11s,+35° 35′ 28.7″,8.42,,522,K0III,"RS CVn variable, *V*max = 8.1m, *V*min = 8.7m, *P* = 24.26007 d"
+X Tri,,,X,12211,9383,02h 00m 33.72s,+27° 53′ 19.3″,8.86,2.76,541,A7V,"Algol variable, *V*max = 8.55m, *V*min = 11.27m, *P* = 0.9715352 d"
+V Tri,,,V,,,01h 31m 47.10s,+30° 22′ 01.6″,10.96,,,A3,"β Lyr variable, *V*max = 10.7m, *V*min = 11.8m, *P* = 0.5852057 d"
+RV Tri,,,RV,,,02h 13m 18.16s,+31° 01′ 01.6″,11.21,,,A2:,Algol variable
+WASP-56,,,,,,01h 44m 19.59s,+31° 41′ 22.5″,11.46,,,G6,has a planet
+RW Tri,,,RW,,,02h 25m 36.15s,+28° 05′ 50.9″,12.5,,,M0V,"Algol variable and nova-like star, *V*max = 12.5m, *V*min = 15.61m, *P* = 
+0.231883392 d"
+AI Tri,,,AI,,,02h 03m 48.61s,+29° 59′ 25.8″,15.3,,,M2.5,"AM Her variable, *V*max = 14.7m, *V*min = 18.2m, *P* = 0.19174566 d"
+Var 83,,,,,,01h 34m 10.91s,+30° 34′ 37.4″,15.4,,3000000,,"in Triangulum Galaxy; luminous blue variable, *V*max = 15.4m, *V*min = 16.6m; 
+one of the most luminous stars known"
+Var B,,,,,,01h 33m 49.20s,+30° 38′ 09.1″,16.21,,3000000,A,"in Triangulum Galaxy; luminous blue variable; one of the most luminous 
+stars known"
+Var C,,,,,,01h 33m 35.14s,+30° 36′ 00.4″,16.43,,3000000,B,"in Triangulum Galaxy; luminous blue variable, *V*max = 15.2m, *V*min = 17.2m; 
+one of the most luminous stars known"
+Var 19,,,,,,01h 33m 57.1s,+30° 45′ 12″,18.2,,3000000,,in Triangulum Galaxy; formerly thought to be a Cepheid variable
+M33 X-7,,,,,,01h 33m 34.13s,+30° 32′ 11.3″,18.7,,3000000,O6III,"in Triangulum Galaxy; High-mass X-ray binary; contains largest known 
+stellar black hole"
+Var A,,,,,,01h 32m 32.52s,+30° 30′ 22.4″,,,3000000,F8Ia,"in Triangulum Galaxy; luminous blue variable; one of the most luminous 
+stars known"
+Var 2,,,Y,,,01h 34m 18.4s,+30° 38′ 27″,,,3000000,Ofpe/WN9,"in Triangulum Galaxy; luminous blue variable; one of the most luminous 
+stars known"
+"Table legend: 
+[TABLE]",,,,,,,,,,,,
