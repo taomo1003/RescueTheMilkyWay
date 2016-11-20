@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Constellation.cs" />
+    <Compile Include="Assets\Constellations.cs" />
     <Compile Include="Assets\CreatSphere.cs" />
     <Compile Include="Assets\CreatSpheres.cs" />
     <Compile Include="Assets\CreatSpheres_Constell.cs" />

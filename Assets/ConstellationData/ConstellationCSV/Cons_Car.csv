@@ -1,4 +1,4 @@
-Name,B,Var,HD,HIP,RA,Dec,"vis.
+﻿Name,B,Var,HD,HIP,RA,Dec,"vis.
 mag.","abs.
 mag.",Dist. (ly),Sp. class,Notes
 Canopus,α,,45348,30438,06h 23m 57.09s,−52° 41′ 44.6″,-0.72,-5.53,313,F0Ib,"Suhel;[1] 2nd brightest star, nearest supergiant"
@@ -253,8 +253,7 @@ WR 40,,V385,96548,54283,11h 06m 17.20s,−65° 30′ 35.2″,7.7,,5900,WN8h,"Wol
 4.76 d; one of the most luminous stars known"
 HD 93205,,V560,93205,,10h 44m 33.74s,−59° 44′ 15.5″,7.75,,7500,O3.5V((f+)),"in Trumpler 16; rotating ellipsoidal variable, *V*max = 7.74m, *V*min = 7.76
 m, *P* = 6.08 d"
-IW Car,,IW,"82084
-82085",,09h 26m 53.30s,−63° 37′ 48.9″,7.9,,,A4Iab/II:,"RV Tau variable, *V*max = 7.77m, *V*min = 9.10m, *P* = 143.6 d"
+IW Car,,IW,"82084",,09h 26m 53.30s,−63° 37′ 48.9″,7.9,,,A4Iab/II:,"RV Tau variable, *V*max = 7.77m, *V*min = 9.10m, *P* = 143.6 d"
 HD 65216,,,65216,38558,07h 53m 41.3s,−63° 38′ 50.4″,7.98,,112,G5V,has two planets (b & c)
 HD 97152,,V431,97152,54574,11h 10m 04.08s,−60° 58′ 45.0″,8.07,,4000,WC7+O7V,"Wolf–Rayet star; eclipsing binary, *V*max = 7.97m, *V*min = 8.08m, *P* = 
 1.62 d"

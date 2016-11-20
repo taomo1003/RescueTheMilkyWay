@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System;
 using UnityEngine;
+using System.Text.RegularExpressions;
 
 public class Star {
     /* • Name = Proper name.
@@ -19,7 +20,6 @@ public class Star {
 
     public string Name;
     public string B;
-    public string F;
     public string var;
     public string HD;
     public string HIP;
@@ -33,10 +33,9 @@ public class Star {
 
     public vector3 location;
 
-    public Star(string Name, string B, string F, string var, string HD, string HIP, string RA, string Dec, string vis_mag, string abs_mag, string Dist, string Sp_class, string Notes) {
+    public Star(string Name, string B, string var, string HD, string HIP, string RA, string Dec, string vis_mag, string abs_mag, string Dist, string Sp_class, string Notes) {
         this.Name = Name;
         this.B = B;
-        this.F = F;
         this.var = var;
         this.HD = HD;
         this.HIP = HIP;
@@ -70,10 +69,17 @@ public class Star {
         float h = float.Parse(RAs[0].Substring(0, 2));
         float m = float.Parse(RAs[1].Substring(0, 2));
         float s = float.Parse(RAs[2].Substring(0, RAs[2].Length-1));
-        string[] Decs = Dec.Split(' ');
-        float decD = float.Parse(Decs[0].Substring(0, Decs[0].Length - 1));
+        string[] Decs = Regex.Split(Dec,@"\s+");
+
+        float decD;
+            if (Decs[0].ToCharArray()[0] ==  '−' || Decs[0].ToCharArray()[0] == '-')
+            decD =  -float.Parse(Decs[0].Substring(1, Decs[0].Length - 2));
+            else
+            decD = float.Parse(Decs[0].Substring(0, Decs[0].Length - 1));
         float decM = float.Parse(Decs[1].Substring(0, Decs[1].Length - 1));
-        float decS = float.Parse(Decs[2].Substring(0, Decs[2].Length - 1));
+        float decS = 0.0f;
+        if (Decs.Length>2)
+            decS = float.Parse(Decs[2].Substring(0, Decs[2].Length - 1));
         float dis = float.Parse(Dist);
 
 

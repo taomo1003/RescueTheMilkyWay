@@ -1,4 +1,4 @@
-Name,B,Var,HD,HIP,RA,Dec,"vis.
+﻿Name,B,Var,HD,HIP,RA,Dec,"vis.
 mag.","abs.
 mag.",Dist. (ly),Sp. class,Notes
 ν Oct,ν,,205478,107089,21h 41m 28.47s,−77° 23′ 22.1″,3.76,2.1,69,K0III,suspected variable
@@ -70,8 +70,7 @@ BQ Oct,,BQ,110994,71348,14h 35m 29.51s,−89° 46′ 18.2″,6.88,,1600,"S5,1","
 HD 142022,,,142022,79242,16h 10m 15.03s,−84° 13′ 53.8″,7.7,5.01,112,K0V,"binary star, component A has a planet (b)"
 HD 212301,,,212301,110852,22h 27m 30.92s,−77° 43′ 04.5″,7.77,4.07,179,F8V,has a planet (b)
 CF Oct,,CF,196818,102803,20h 49m 37.26s,−80° 08′ 01.0″,7.93,,683,K0IIIp,slow irregular variable
-HD 188136,,CC,"188136
-188137",98757,20h 03m 31.75s,−78° 49′ 50.7″,8.01,,620,ApSrYZrBa,"δ Sct variable, Δ*V* = 0.1m, *P* = 0.1249 d"
+HD 188136,,CC,"188136",98757,20h 03m 31.75s,−78° 49′ 50.7″,8.01,,620,ApSrYZrBa,"δ Sct variable, Δ*V* = 0.1m, *P* = 0.1249 d"
 X Oct,,X,91620,51084,10h 26m 14.25s,−84° 20′ 53.9″,8.7,,997,M5/M6e,"Mira variable, *V*max = 6.8m, *V*min = 10.9m, *P* = 200 d"
 HD 89499,,DR,89499,49616,10h 07m 29.54s,−85° 04′ 33.0″,8.7,,373,G3V,"RS CVn variable, *V*max = 8.7m, *V*min = 8.73m, *P* = 5.532 d"
 UV Oct,,UV,156008,80990,16h 32m 59.53s,−83° 14′ 10.5″,9.44,,1340,A9:Ia/Iabw,"RR Lyr variable, *V*max = 8.7m, *V*min = 9.97m, *P* = 0.54258 d"
