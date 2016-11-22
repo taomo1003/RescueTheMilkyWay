@@ -1,0 +1,92 @@
+Name,B,Var,HD,HIP,RA,Dec,"vis.
+mag.","abs.
+mag.",Dist. (ly),Sp. class,Notes
+α Dor,α,,29305,21281,04h 33m 59.72s,−55° 02′ 42.0″,3.3,-0.36,176,A0IIIp(Si),"double star; α2 CVn variable, *V*max = 3.26m, *V*min = 3.30m, *P* = 2.95 d"
+β Dor,β,,37350,26069,05h 33m 37.52s,−62° 29′ 23.5″,3.76,-3.76,1038,F4-G4Ia-II,"Cepheid variable, *V*max = 3.41m, *V*min = 4.08m, *P* = 9.8426 d"
+γ Dor,γ,,27290,19893,04h 16m 01.49s,−51° 29′ 13.5″,4.26,2.72,66,F0V-F5V,"prototype γ Dor variable, *V*max = 4.23m, *V*min = 4.27m, *P* = 0.7570 d"
+δ Dor,δ,,39014,27100,05h 44m 46.42s,−65° 44′ 07.9″,4.34,1.1,145,A7V,
+HD 40409,,,40409,27890,05h 54m 05.90s,−63° 05′ 27.7″,4.65,2.47,89,K1III/IV,
+ζ Dor,ζ,,33262,23693,05h 05m 30.69s,−57° 28′ 22.8″,4.71,4.38,38,F7V,"variable star, Δ*V* = 0.005m, *P* = 3.49614 d"
+θ Dor,θ,,34649,24372,05h 13m 45.43s,−67° 11′ 07.3″,4.81,-1.31,546,K2III,
+η2 Dor,η2,,43455,29353,06h 11m 15.02s,−65° 35′ 22.9″,5.01,-1.56,671,M2.5III,"semiregular variable, *V*max = 4.94m, *V*min = 5.09m"
+ν Dor,ν,,43107,29134,06h 08m 44.34s,−68° 50′ 36.4″,5.06,0.42,277,B8V,
+ε Dor,ε,,39844,27534,05h 49m 53.55s,−66° 54′ 04.4″,5.1,-0.88,512,B6V,suspected variable
+λ Dor,λ,,36189,25429,05h 26m 19.28s,−58° 54′ 45.4″,5.14,-0.64,467,G6III,
+WZ Dor,,WZ,33684,23840,05h 07m 34.01s,−63° 23′ 58.5″,5.19,-1.23,627,M3III,"semiregular variable, Δ*V* = 0.12m, *P* = 40 d"
+κ Dor,κ,,30478,22040,04h 44m 21.12s,−59° 43′ 58.2″,5.28,1.11,222,A8/A9III/IV,"suspected δ Sct variable, Δ*V* = 0.03m"
+HD 37297,,,37297,26001,05h 32m 59.52s,−64° 13′ 39.1″,5.34,1.08,232,G8/K0III,spectroscopic binary
+π2 Dor,π2,,46116,30565,06h 25m 28.65s,−69° 41′ 26.8″,5.37,0.81,266,G8III,
+π1 Dor,π1,,45669,30321,06h 22m 38.23s,−69° 59′ 02.9″,5.56,-0.75,595,K5III,
+R Dor,,R,29712,21479,04h 36m 45.68s,−62° 04′ 37.1″,5.59,1.61,203,M8IIIe,"semiregular variable, *V*max = 4.78m, *V*min = 6.32m, *P* = 172 d"
+η1 Dor,η1,,42525,28909,06h 06m 09.36s,−66° 02′ 22.9″,5.72,0.68,332,A0V,
+HD 36584,,,36584,25482,05h 26m 59.82s,−68° 37′ 21.0″,6.02,1.62,248,F0IV/V,double star
+HD 27604,,,27604,20109,04h 18m 39.98s,−52° 51′ 37.0″,6.08,1.73,242,A8V+...,double star
+HD 31746,,,31746,22844,04h 54m 52.92s,−58° 32′ 52.1″,6.11,3.66,101,F3V,
+HD 36876,,,36876,25781,05h 30m 15.87s,−63° 55′ 40.2″,6.19,0.75,400,F0IV,double star
+HD 28255,,,28255,20552,04h 24m 12.32s,−57° 04′ 16.2″,6.28,4.12,88,G4V+...,triple star
+HR 1960,,AZ,37935,26368,05h 36m 54.99s,−66° 33′ 37.1″,6.28,-0.82,856,B9.5V,"Be star, *V*max = 6.26m, *V*min = 6.29m, *P* = 395.48 d"
+HD 46730,,,46730,30973,06h 30m 03.01s,−65° 34′ 06.2″,6.28,1.34,317,F0III,"variable star, Δ*V* = 0.008m, *P* = 0.10133 d"
+HD 37501,,,37501,26190,05h 34m 57.44s,−61° 10′ 33.5″,6.32,1.18,348,G5IV,
+HD 39963,,,39963,27660,05h 51m 23.10s,−64° 02′ 01.0″,6.35,-1.32,1116,G8III,
+HD 31754,,,31754,22737,04h 53m 30.49s,−66° 40′ 31.6″,6.43,-1.3,1148,M0/M1III,"semiregular variable, *V*max = 6.39m, *V*min = 6.43m"
+HD 24863,,,24863,18275,03h 54m 33.94s,−52° 41′ 25.2″,6.46,1.31,349,A4V,"suspected variable, *V*max = 6.40m, *V*min = 6.47m"
+HD 30610,,,30610,22081,04h 44m 57.91s,−63° 13′ 46.9″,6.46,0.73,456,K0/K1III,"suspected variable, *V*max = 6.45m, *V*min = 6.48m"
+XY Dor,,XY,25470,18691,04h 00m 15.53s,−51° 33′ 53.9″,6.52,,1250,M1III,"semiregular variable, Δ*V* = 0.07m"
+XZ Dor,,XZ,31009,22381,04h 49m 04.75s,−56° 39′ 59.7″,6.55,,1450,M2III,"slow irregular variable, Δ*V* = 0.16m"
+AB Dor,,AB,36705,25647,05h 28m 44.83s,−65° 26′ 54.9″,7,,49,K0V,"triple star system; T Tau star, *V*max = 6.74m, *V*min = 7.12m, *P* = 
+0.5139 d; member of the AB Doradus moving group"
+HD 28254,,,28254,20606,04h 24m 50.71s,−50° 37′ 19.9″,7.71,3.96,183,G5V,has a planet (b)
+HD 30177,,,30177,21850,04h 41m 54.37s,−58° 01′ 14.7″,8.41,,179,G8V,has a planet (b)
+HD 33579,,,33579,23718,05h 05m 55.51s,−67° 53′ 10.9″,9.14,,160000,A4Ia,in LMC; yellow hypergiant
+S Dor,,S,35343,,05h 18m 14.3s,−69° 14′ 59″,9.72,,,A0-5eq,"in LMC; prototype luminous blue variable, *V*max = 8.8m, *V*min = 10.83m; 
+one of the most luminous stars known"
+WASP-62,,,,,05h 48m 34.0s,−63° 59′ 18″,10.3,,1566,F7,has a transiting planet (b)
+HD 38282,,,38282,,05h 38m 53.39s,−69° 02′ 00.9″,10.5,,160000,WN5-6h+WN6-6h,"in LMC; Wolf-Rayet binary; both components among the most luminous stars 
+known"
+HD 37974,,,37974,,05h 36m 25.84s,−69° 22′ 55.9″,10.96,,160000,Be,"in LMC; blue hypergiant; α Cyg variable, *V*max = 10.85m, *V*min = 11.0m, 
+one of the most luminous stars known"
+Melnick 42,,,,,05h 38m 42.13s,−69° 05′ 55.3″,10.96,,160000,O3If/WN,in LMC; one of the most luminous stars known
+AA Dor,,AA,269696,,05h 31m 40.35s,−69° 53′ 02.2″,11.14,,,sdB+dM,"Algol variable, *V*max = 11.13m, *V*min = 11.6m, *P* = 0.2615398 d"
+RW Dor,,RW,269320,24763,05h 18m 32.54s,−68° 13′ 32.8″,11.16,,307.5,G4/5V,"W UMa variable, Δ*V* = 0.454m, *P* = 0.285463 d"
+R99,,,269445,,05h 22m 59.80s,−68° 01′ 46.6″,11.46,,160000,Bep,"in LMC; luminous blue variable, one of the most luminous stars known"
+HD 36402,,,36402,,05h 26m 03.94s,−67° 29′ 57.0″,11.62,,160000,WC4+O8I,in LMC; Wolf–Rayet star
+HV 883,,,,,05h 00m 07.51s,−68° 27′ 00.2″,11.63,,160000,G2:Iabv...,"in LMC; Cepheid variable, *V*max = 11.55m, *V*min = 12.85m, *P* = 133.45 d"
+HD 34664,,,34664,,05h 13m 52.99s,−67° 26′ 54.9″,11.7,,160000,B0Iab:e,in LMC; Be star
+Gliese 163,,,,19394,04h 09m 15.66s,−53° 22′ 25.3″,11.81,,48.88,M3.5,has 3 planets
+R139,,,,,05h 38m 42.35s,−69° 04′ 58.1″,11.97,,160000,O7Iap,in LMC; one of the most luminous stars known
+Brey 75,,,,,05h 38m 40.53s,−67° 05′ 57.2″,12.02,,160000,WN6h,in LMC; Wolf–Rayet star; one of the most luminous stars known
+R84,,,269227,,05h 13m 54.27s,−69° 31′ 46.7″,12.04,,160000,WN9h,in LMC; Wolf–Rayet star
+HD 38489,,,38489,,05h 40m 13.33s,−69° 22′ 46.5″,12.22,,160000,B[e],in LMC; Be star
+HD 269810,,,269810,,05h 35m 13.91s,−67° 33′ 27.5″,12.28,,160000,OB,in LMC; one of the most luminous and most massive stars known
+BAT99-104,,,,,05h 38m 41.88s,−69° 06′ 13.7″,12.5,,160000,WN,in LMC; Wolf–Rayet star; one of the most luminous stars known
+R136a1,,,,,05h 38m 42.43s,−69° 06′ 02.2″,12.77,,160000,WN5h,in R136; most massive and most luminous star known as of 2014
+R136c,,,,,05h 38m 42.92s,−69° 06′ 04.9″,12.86,,160000,WN5h,in R136; one of the most massive and most luminous stars known
+R136a3,,,,,05h 38m 42.29s,−69° 06′ 03.5″,12.93,,160000,Wn5h,in R136; one of the most massive and most luminous stars known
+HD 38344,,,38344,,05h 39m 11.32s,−69° 02′ 01.4″,13.07,,160000,WR:,in LMC; Wolf–Rayet star; one of the most luminous stars known
+LH54-425,,,,,05h 26m 24.25s,−67° 30′ 17.2″,13.1,,160000,O3IIIf+O6v,in LMC
+BE 381,,,,,05h 35m 54.37s,−67° 59′ 07.9″,13.27,,160000,WN9h,in LMC; Wolf–Rayet star
+R136a2,,,,,05h 36m 42.45s,−69° 06′ 02.2″,13.38,,160000,Wn5h,in R136; one of the most massive and most luminous stars known
+BAT99-116,,,,,05h 38m 44.25s,−69° 06′ 05.8″,13.5,,160000,WN...,"in LMC; high-mass X-ray binary; companion star is one of the most luminous 
+stars known"
+R136b,,,,,05h 38m 42.77s,−69° 06′ 03.4″,13.66,,160000,WN9ha,in R136; Wolf–Rayet star
+R136a5,,,,,05h 38m 42.47s,−69° 06′ 02.0″,13.73,,160000,O3Iab:,in R136; one of the most massive and most luminous stars known
+A0538-66,,,,,05h 35m 41.01s,−66° 51′ 53.5″,13.8,,160000,B0.5IIIe,in LMC; high-mass X-ray binary
+BI 253,,,,,05h 37m 34.46s,−69° 01′ 10.2″,13.88,,160000,O2V(f*),in LMC; O2 spectral type standard; runaway star
+LMC X-4,,,,,05h 32m 49.54s,−66° 22′ 13.3″,14,,160000,O8III,in LMC; high-mass X-ray binary
+BAT99-68,,,,,05h 35m 42.22s,−69° 11′ 54.24″,14.13,,160000,O3If*/WN6,in LMC; Wolf–Rayet binary; one of the most luminous stars known
+BB Dor,,BB,,,05h 29m 28.66s,−58° 54′ 46.5″,14.3,,,,"VY Scl variable, *V*max = 14.3m, *V*min = 19.3m, *P* = 0.154095 d"
+R127,,,269858,,05h 36m 43.69s,−69° 29′ 47.5″,14.5,,160000,O8(f)p,in LMC; luminous blue variable
+LMC X-1,,,,,05h 39m 38.84s,−69° 44′ 35.7″,14.5,,160000,O8(f)p,in LMC; high-mass X-ray binary
+HD 269908,,,269908,,05h 38m 27.70s,−68° 28′ 58.5″,14.71,,160000,WR,in LMC; Wolf–Rayet star; one of the most luminous stars known
+BAT99-66,,,,,05h 35m 29.81s,−67° 06′ 49.4″,15.36,,160000,WR:,in LMC; Wolf–Rayet star; one of the most luminous stars known
+VFTS 102,,,,,05h 37m 39.25s,−69° 05′ 51.04″,15.81,,160000,Omp+...,in LMC; fastest-rotating known star
+VFTS 682,,,,,05h 38m 59.53s,−69° 04′ 26.72″,16.08,,160000,WN5h,in LMC; one of the most massive and most luminous stars known
+HE 0437-5439,,,,,04h 38m 12.77s,−54° 33′ 11.9″,16.3,,200000,BV,hypervelocity star
+LMC X-3,,,,,05h 38m 56.30s,−64° 05′ 03.0″,17.2,,160000,B2.5Ve,in LMC; high-mass X-ray binary
+WOH G64,,,,,04h 55m 10.48s,−68° 20′ 29.8″,18.46,,160000,M7.5,in LMC; one of the largest known stars
+CAL-83,,,,,05h 43m 34.5s,−68° 22′ 18″,,,160000,,in LMC; X-ray binary
+PSR B0540-69,,,,,05h 40m 11.16s,−69° 19′ 53.9″,,,160000,O8(f)p,in LMC; pulsar
+PSR J0537-6910,,,,,05h 37m 47.42s,−69° 10′ 19.9″,,,160000,O8(f)p,in LMC; pulsar
+SGR 0525-66,,,,,05h 26m 00.7s,−66° 04′ 35″,,,160000,,in LMC; soft gamma repeater
+"Table legend: 
+[TABLE]",,,,,,,,,,,
