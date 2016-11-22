@@ -16,14 +16,15 @@ public class Constellations {
         return constellations;
     }
 
-    public void readConsFromFile() {
+    public void readConsFromFile()
+    {
         int count = 0;
-        var readerNAME = new StreamReader(File.OpenRead(@"./_names"));
+        var readerNAME = new StreamReader(File.OpenRead(@"./Assets/ConstellationData/ConstellationCSV/_names"));
         while (!readerNAME.EndOfStream)
         {
             string name = readerNAME.ReadLine();
             Console.WriteLine(name);
-            var readerX = new StreamReader(File.OpenRead(@"./Cons_" + name + ".csv"));
+            var readerX = new StreamReader(File.OpenRead(@"./Assets/ConstellationData/ConstellationCSV/Cons_" + name + ".csv"));
             var line = "";
             bool RApositionFind = false;
             int RAposition = 0;
@@ -31,8 +32,8 @@ public class Constellations {
 
             while (!readerX.EndOfStream)
             {
-                
-                
+
+
                 line = readerX.ReadLine();
                 string[] temp = line.Split(',');
                 if (temp.Length > 10)
@@ -47,9 +48,9 @@ public class Constellations {
                     string DEC = "";
                     string vismag = "";
                     string absmag = "";
-                    string dist="";
-                    string Sp_class ="";
-                    string notes="";
+                    string dist = "";
+                    string Sp_class = "";
+                    string notes = "";
                     if (temp[0].Equals("Name")) continue;
                     if (temp[0].Equals("[TABLE]\"")) continue;
                     if (!RApositionFind)
@@ -108,7 +109,7 @@ public class Constellations {
                                 notes = temp[RAposition + 6];
 
                         }
-                       
+
                     }
 
                     if (dist == "") continue;
@@ -118,7 +119,8 @@ public class Constellations {
                     {
                         float distemp = float.Parse(dist);
                     }
-                    catch (Exception e) {
+                    catch (Exception e)
+                    {
                         continue;
                     }
                     try
@@ -135,7 +137,8 @@ public class Constellations {
                         }
 
                     }
-                    catch (Exception e) {
+                    catch (Exception e)
+                    {
                         continue;
                     }
                 }
@@ -143,6 +146,20 @@ public class Constellations {
             }
 
             constellations.Add(name, cons);
+        }
+
+        readerNAME = new StreamReader(File.OpenRead(@"./Assets/ConstellationData/Const_line"));
+        Constellation currentCon = null;
+        while (!readerNAME.EndOfStream)
+        {
+            string temp = readerNAME.ReadLine();
+            string[] topo = temp.Split(',');
+            if (topo.Length == 1)
+            {
+                constellations.TryGetValue(topo[0], out currentCon);
+                continue;
+            }
+            currentCon.topoMap.Add(new Constellation.StarLine(topo[0], topo[1]));
         }
     }
 }

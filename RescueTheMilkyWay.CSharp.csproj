@@ -78,9 +78,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ConnectLine.cs" />
     <Compile Include="Assets\Constellation.cs" />
     <Compile Include="Assets\Constellations.cs" />
-    <Compile Include="Assets\CreatSphere.cs" />
     <Compile Include="Assets\CreatSpheres.cs" />
     <Compile Include="Assets\CreatSpheres_Constell.cs" />
     <Compile Include="Assets\Creat_Constellation.cs" />

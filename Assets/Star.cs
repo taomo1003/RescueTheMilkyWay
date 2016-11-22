@@ -33,6 +33,8 @@ public class Star {
 
     public vector3 location;
 
+    public GameObject starObject;
+
     public Star(string Name, string B, string var, string HD, string HIP, string RA, string Dec, string vis_mag, string abs_mag, string Dist, string Sp_class, string Notes) {
         this.Name = Name;
         this.B = B;
@@ -46,7 +48,6 @@ public class Star {
         this.Dist = Dist;
         this.Sp_class = Sp_class;
         this.Notes = Notes;
-
         location = getXYZ(RA, Dec, Dist);
     }
 

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using System.IO;
+using System.Collections.Generic;
 
 public class Creat_Constellation : MonoBehaviour {
     // Use this for initialization
@@ -8,51 +9,76 @@ public class Creat_Constellation : MonoBehaviour {
     public long M = 10000;
     public float scale = 1f;
     public Boolean mat = true;
+
+    private Constellations cons;
     void Start()
     {
+        cons = new Constellations();
         Material newMat = Resources.Load("Sun", typeof(Material)) as Material;
 
         GameObject[] sphere = new GameObject[N];
         long Count = 0;
-
         System.Random rdm = new System.Random();
 
-        var readerX = new StreamReader(File.OpenRead(@"./Assets/Resources/X.txt"));
-        var readerY = new StreamReader(File.OpenRead(@"./Assets/Resources/Y.txt"));
-        var readerZ = new StreamReader(File.OpenRead(@"./Assets/Resources/Z.txt"));
-        //int i = 0;
-        while (!readerX.EndOfStream && Count < N)
+        GameObject[] line = new GameObject[180];
+        int i = 0;
+
+        foreach (KeyValuePair<string, Constellation> current_constellation in cons.getConstellations())
         {
-            float tx = ReadLine(readerX);
-            float ty = ReadLine(readerY);
-            float tz = ReadLine(readerZ);
 
-            if (mat)
-            {
-                String name = "Sunpre" + rdm.Next(0, 3).ToString();
-                sphere[Count] = (GameObject)Instantiate(Resources.Load(name, typeof(GameObject)));
-            }
-            else
-            {
-                sphere[Count] = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            }
-            sphere[Count].transform.position = new Vector3(tx * M, ty * M, tz * M);
-            sphere[Count].transform.localScale = new Vector3(scale, scale, scale);
-            Count++;
+            //if (String.Equals(current_constellation.Value.Name, "Sgr")) {
 
+                foreach (KeyValuePair<string, Star> current_star in current_constellation.Value.stars)
+                {
+                    float tx = current_star.Value.location.x;
+                    float ty = current_star.Value.location.y;
+                    float tz = current_star.Value.location.z;
+
+                    if (mat)
+                    {
+                        String name = "Sunpre" + rdm.Next(0, 3).ToString();
+                        sphere[Count] = (GameObject)Instantiate(Resources.Load(name, typeof(GameObject)));
+                    }
+                    else
+                    {
+                        sphere[Count] = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                    }
+                    sphere[Count].transform.position = new Vector3(tx * M, ty * M, tz * M);
+                    sphere[Count].transform.localScale = new Vector3(scale, scale, scale);
+                    current_star.Value.starObject = sphere[Count];
+                    Count++;
+                    if (Count > N - 1) return;
+                }
+
+
+
+                foreach (Constellation.StarLine starLine in current_constellation.Value.topoMap) {
+                    try
+                    {
+                        line[i] = (GameObject)Instantiate(Resources.Load("Line", typeof(GameObject)));
+
+                        Star tempStar;
+                        current_constellation.Value.stars.TryGetValue(starLine.starA, out tempStar);
+                        line[i].GetComponent<ConnectLine>().a = tempStar.starObject.transform.position;
+                        current_constellation.Value.stars.TryGetValue(starLine.starB, out tempStar);
+                        line[i].GetComponent<ConnectLine>().b = tempStar.starObject.transform.position;
+                        line[i].SetActive(true);
+                    }
+                    catch (Exception e) {
+                        continue;
+                    }
+                }
+            //}
         }
-
     }
 
     void Update()
     {
 
     }
-
-    float ReadLine(StreamReader reader)
+    public Constellations getConstellations()
     {
-        var line = reader.ReadLine();
-        var values = line.Split(';');
-        return Convert.ToSingle(values[0]);
+        return cons;
     }
+
 }
