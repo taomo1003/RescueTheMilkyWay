@@ -73,6 +73,8 @@ public class Creat_Constellation : MonoBehaviour {
                 */
             //}
         }
+
+        Debug.Log("stars_num:" + Count);
     }
 
     void Update()

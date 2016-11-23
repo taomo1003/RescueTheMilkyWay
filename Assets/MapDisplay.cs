@@ -52,6 +52,7 @@ public class MapDisplay : MonoBehaviour{
         float[] result = new float[2];
 
         float r = Mathf.Sqrt(tempx * tempx + tempy * tempy + tempz * tempz);
+        if (r < 1e-5) r = 1e-5f;
         float B = Mathf.Asin(tempz / r);
         float A = Mathf.Asin(tempy / r / Mathf.Cos(B));
 
@@ -63,17 +64,12 @@ public class MapDisplay : MonoBehaviour{
         float H = Mathf.Floor(A / 15);
         float Mi = Mathf.Floor((A - H*15) /0.25f);
         float Se = Mathf.Floor((A - H*15 - Mi*0.25f) / 0.004166f );
-        Debug.Log("H:    " + H);
-        Debug.Log("Mi:    " + Mi);
-        Debug.Log("Se:    " + Se);
-
+        
         H = H + Mi / 60.0f + Se / 3600.0f;
 
         result[0] = 88.2f - 88.2f / 24f * H;
         result[1] = -22.05f + 22.05f / 90f * B;
-        Debug.Log("r:    " + r);
-        Debug.Log("B:    " + B);
-        Debug.Log("A:    " + A);
+      
         return result; 
 
     }
