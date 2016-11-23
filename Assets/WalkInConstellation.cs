@@ -1,23 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UI;
 
 public class WalkInConstellation : MonoBehaviour {
     private static Constellations cons;
     public GameObject cam;
 	// Use this for initialization
     public int distanceToTrigger = 10;
+    public Text countText;
+    public Text winText;
 
     private bool notInGame = true;
-    private int currentIndex = 0;
+    private int currentIndex = -1;
     private GameObject[] line;
     private int totalLines = 0;
     private GameObject Arrow;
 
+
+
+    public string constellation_Walk = "Lib";
+
+    private Star[] stars;
+
     void Start () {
         line = new GameObject[20];
         Arrow = new GameObject();
-        
+        stars = new Star[20];
     }
 	
 	// Update is called once per frame
@@ -30,14 +39,14 @@ public class WalkInConstellation : MonoBehaviour {
             notInGame = false;
             line = new GameObject[20];
             Constellation current_constellation;
-
-           
-
+            stars = new Star[20];
+            Arrow = new GameObject();
+            currentIndex = 0;
             totalLines = 0;
             Arrow = (GameObject)Instantiate(Resources.Load("Arrow", typeof(GameObject)));
 
 
-            cons.getConstellations().TryGetValue("Aqr", out current_constellation);
+            cons.getConstellations().TryGetValue(constellation_Walk, out current_constellation);
 
             
             foreach (Constellation.StarLine starLine in current_constellation.topoMap)
@@ -50,7 +59,7 @@ public class WalkInConstellation : MonoBehaviour {
                     line[totalLines].GetComponent<ConnectLine>().a = tempStar.starObject.transform.position;
                     current_constellation.stars.TryGetValue(starLine.starB, out tempStar);
                     line[totalLines].GetComponent<ConnectLine>().b = tempStar.starObject.transform.position;
-
+                    stars[totalLines] = tempStar;
                     totalLines++;
                 }
                 catch (Exception e)
@@ -58,22 +67,29 @@ public class WalkInConstellation : MonoBehaviour {
                     continue;
                 }
             }
+
+
         }
 
 
-        if (!notInGame && currentIndex<=totalLines) {
+        if (!notInGame && currentIndex<totalLines) {
+            countText.text = "Game Mode\nRescuing: " + constellation_Walk + "\nTotal Lines: " + (totalLines + 1) + "\nNext Star: " + stars[currentIndex].Name + "\nInfo:\nPosition: X:" + Mathf.Round(stars[currentIndex].location.x*100)/100 + " Y:" + Mathf.Round(stars[currentIndex].location.y*100)/100
+                 + " Z:" + Mathf.Round(stars[currentIndex].location.z*100)/100 + "\nDistance: " + Mathf.Round(distance(line[currentIndex].GetComponent<ConnectLine>().b, transform.position)*100)/200 +" Light Year(s)";
 
             var rot = Quaternion.LookRotation(line[currentIndex].GetComponent<ConnectLine>().b - transform.position);
             Arrow.transform.rotation = Quaternion.Slerp(Arrow.transform.rotation, rot, Time.deltaTime * 0.5f);
-
             Vector3 moveArrowTo = transform.position + cam.transform.forward * 15.0f + Vector3.up * 1.0f + Vector3.right * 3.0f;
-            Debug.Log(cam.transform.localPosition.x);
 
             float smoothFac = 0.6f;
 
             Arrow.transform.position = smoothFac * Arrow.transform.position + moveArrowTo * (1 - smoothFac);
 
-            if (distance(line[currentIndex].GetComponent<ConnectLine>().b, transform.position) < distanceToTrigger) {
+            //if (distance(line[currentIndex].GetComponent<ConnectLine>().b, transform.position) < distanceToTrigger) {
+            //    line[currentIndex].SetActive(true);
+            //    currentIndex++;
+            //}
+
+            if (Input.GetKeyDown(KeyCode.A)) {
                 line[currentIndex].SetActive(true);
                 currentIndex++;
             }
@@ -81,12 +97,20 @@ public class WalkInConstellation : MonoBehaviour {
 
         }
 
-        if (currentIndex > totalLines) {
+        if (currentIndex >= totalLines) {
             //finished game
-            Debug.Log("Congradulation!" + "You Finished:" + "Aqr");
+            countText.text = "";
+            
+            transform.position = new Vector3(0f, 0f, 0f);
+            winText.text = "You made it!!!\nYou saved " + constellation_Walk + ".\nGo around to see what it is like.\nPress Q to quit Game Mode";
             notInGame = true;
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            winText.text = "";
+
+        }
+
     }
 
 
