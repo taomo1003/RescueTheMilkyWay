@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 public class Creat_Constellation : MonoBehaviour {
     // Use this for initialization
-    public long N = 7000;
-    public long M = 10000;
+    public long N = 20;
+    public long M = 2;
     public float scale = 1f;
     public Boolean mat = true;
 
-    private Constellations cons;
+    private static Constellations cons;
     void Start()
     {
         cons = new Constellations();
@@ -27,12 +27,14 @@ public class Creat_Constellation : MonoBehaviour {
         {
 
             //if (String.Equals(current_constellation.Value.Name, "Sgr")) {
-
+            int count = 0;
                 foreach (KeyValuePair<string, Star> current_star in current_constellation.Value.stars)
                 {
+                count++;
+                if (count > 20) break;
                     float tx = current_star.Value.location.x;
                     float ty = current_star.Value.location.y;
-                    float tz = current_star.Value.location.z;
+                    float tz = -current_star.Value.location.z;
 
                     if (mat)
                     {
@@ -52,7 +54,7 @@ public class Creat_Constellation : MonoBehaviour {
 
 
 
-                foreach (Constellation.StarLine starLine in current_constellation.Value.topoMap) {
+                /*foreach (Constellation.StarLine starLine in current_constellation.Value.topoMap) {
                     try
                     {
                         line[i] = (GameObject)Instantiate(Resources.Load("Line", typeof(GameObject)));
@@ -68,6 +70,7 @@ public class Creat_Constellation : MonoBehaviour {
                         continue;
                     }
                 }
+                */
             //}
         }
     }
@@ -76,7 +79,7 @@ public class Creat_Constellation : MonoBehaviour {
     {
 
     }
-    public Constellations getConstellations()
+    public static Constellations getConstellations()
     {
         return cons;
     }
