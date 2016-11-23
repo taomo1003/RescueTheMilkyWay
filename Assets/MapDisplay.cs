@@ -4,7 +4,7 @@ using System.Collections;
 public class MapDisplay : MonoBehaviour{
 
     public GameObject map; // Assign in inspector
-    public GameObject Button;
+    public GameObject Dot;
     public GameObject mainCam;
 
     private bool flickFlag = false;
@@ -15,13 +15,14 @@ public class MapDisplay : MonoBehaviour{
     void Start()
     {
         map.SetActive(false);
+        Dot.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
     }
 
 
     void Update()
     {
         float[] position = getRA_Dec(mainCam.transform.position.x, mainCam.transform.position.y, -mainCam.transform.position.z);
-        Button.transform.localPosition = new Vector3(position[0], position[1], 0.0f);
+        Dot.transform.localPosition = new Vector3(position[0], position[1], 0.0f);
 
         if (Input.GetKeyDown(KeyCode.Tab)){
             map.SetActive(true);
@@ -30,7 +31,7 @@ public class MapDisplay : MonoBehaviour{
         
         if (flickFlag && count == 0)
         {
-            Button.SetActive(!Button.activeSelf);
+            Dot.SetActive(!Dot.activeSelf);
         }
 
         count++;
@@ -48,12 +49,13 @@ public class MapDisplay : MonoBehaviour{
 
 
     private float[] getRA_Dec(float tempx, float tempy, float tempz) {
-        float[] reault = new float[2];
+        float[] result = new float[2];
 
         float r = Mathf.Sqrt(tempx * tempx + tempy * tempy + tempz * tempz);
         float B = Mathf.Asin(tempz / r);
         float A = Mathf.Asin(tempy / r / Mathf.Cos(B));
 
+        if (A < 0) { A += 2 * Mathf.PI; }
         //change to degree
         B = B/Mathf.PI * 180f;
         A = A/Mathf.PI * 180f;
@@ -61,15 +63,18 @@ public class MapDisplay : MonoBehaviour{
         float H = Mathf.Floor(A / 15);
         float Mi = Mathf.Floor((A - H*15) /0.25f);
         float Se = Mathf.Floor((A - H*15 - Mi*0.25f) / 0.004166f );
+        Debug.Log("H:    " + H);
+        Debug.Log("Mi:    " + Mi);
+        Debug.Log("Se:    " + Se);
 
         H = H + Mi / 60.0f + Se / 3600.0f;
 
-        reault[0] = 88.2f - 88.2f / 24f * H;
-        reault[1] = -22.05f + 22.05f / 90f * B;
+        result[0] = 88.2f - 88.2f / 24f * H;
+        result[1] = -22.05f + 22.05f / 90f * B;
         Debug.Log("r:    " + r);
         Debug.Log("B:    " + B);
         Debug.Log("A:    " + A);
-        return reault; 
+        return result; 
 
     }
 }
