@@ -188,6 +188,7 @@
     <Compile Include="Assets\VRStandardAssets\Scripts\VRFPSCounter.cs" />
     <Compile Include="Assets\VRStandardAssets\Scripts\VRInput.cs" />
     <Compile Include="Assets\VRStandardAssets\Scripts\VRTrackingReset.cs" />
+    <Compile Include="Assets\WalkInConstellation.cs" />
     <Compile Include="Assets\Walker.cs" />
   </ItemGroup>
   <ItemGroup>
