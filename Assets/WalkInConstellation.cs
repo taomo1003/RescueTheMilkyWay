@@ -10,13 +10,14 @@ public class WalkInConstellation : MonoBehaviour {
     public int distanceToTrigger = 10;
     public Text countText;
     public Text winText;
+    public Transform textParent;
 
     private bool notInGame = true;
     private int currentIndex = -1;
     private GameObject[] line;
     private int totalLines = 0;
     private GameObject Arrow;
-
+    private GameObject star;
 
 
     public string constellation_Walk = "Lib";
@@ -24,9 +25,9 @@ public class WalkInConstellation : MonoBehaviour {
     private Star[] stars;
 
     void Start () {
-        line = new GameObject[20];
-        Arrow = new GameObject();
-        stars = new Star[20];
+        //line = new GameObject[20];
+        //Arrow = new GameObject();
+        //stars = new Star[20];
     }
 	
 	// Update is called once per frame
@@ -100,15 +101,24 @@ public class WalkInConstellation : MonoBehaviour {
         if (currentIndex >= totalLines) {
             //finished game
             countText.text = "";
-            
-            transform.position = new Vector3(0f, 0f, 0f);
+            star = (GameObject)Instantiate(Resources.Load(constellation_Walk, typeof(GameObject)));
+            star.transform.SetParent(textParent, false);
+            star.transform.localPosition = new Vector3(35.0f,-7.0f,-33.5f);
+            star.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+
             winText.text = "You made it!!!\nYou saved " + constellation_Walk + ".\nGo around to see what it is like.\nPress Q to quit Game Mode";
+            currentIndex = -1;
+            totalLines = 0;
+            Destroy(Arrow);
             notInGame = true;
         }
 
         if (Input.GetKeyDown(KeyCode.Q)) {
+            Destroy(star);
+            
             winText.text = "";
-
+            
+            transform.position = new Vector3(0f, 0f, 0f);
         }
 
     }
