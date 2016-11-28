@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using VRStandardAssets.Utils;
 
 namespace VRStandardAssets.Examples
@@ -17,15 +18,17 @@ namespace VRStandardAssets.Examples
         public GameObject explode;
         bool waitActive = false;
         bool canSwitch = false;
+        private Text infoPan;
         private void Awake ()
         {
             m_Renderer.material = m_NormalMaterial;
             m_InteractiveItem = gameObject.GetComponent<VRInteractiveItem>();
+            infoPan = GameObject.FindWithTag("InfoPan").GetComponent<Text>() as Text;
 
         }
 
 
-        private void OnEnable()
+    private void OnEnable()
         {
 
             m_InteractiveItem.OnOver += HandleOver;
@@ -51,6 +54,7 @@ namespace VRStandardAssets.Examples
         {
             Debug.Log("Show over state");
             m_Renderer.material = m_OverMaterial;
+            infoPan.text = "Onthe pan";
         }
 
 
@@ -59,6 +63,7 @@ namespace VRStandardAssets.Examples
         {
             Debug.Log("Show out state");
             m_Renderer.material = m_NormalMaterial;
+            infoPan.text = "";
         }
 
 
@@ -67,16 +72,16 @@ namespace VRStandardAssets.Examples
         {
             Debug.Log("Show click state");
             m_Renderer.material = m_ClickedMaterial;
-            StartCoroutine(Wait());
+            //StartCoroutine(Wait());
 
         }
 
-        IEnumerator Wait()
-        {
-            explode.SetActive(true);
-            yield return new WaitForSeconds(1.3f);
-            this.gameObject.SetActive(false);
-        }
+        //IEnumerator Wait()
+        //{
+        //    explode.SetActive(true);
+        //    yield return new WaitForSeconds(1.3f);
+        //    this.gameObject.SetActive(false);
+        //}
 
         //Handle the DoubleClick event
         private void HandleDoubleClick()

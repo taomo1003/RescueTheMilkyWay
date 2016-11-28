@@ -55,8 +55,19 @@ public class MapDisplay : MonoBehaviour{
         if (r < 1e-5) r = 1e-5f;
         float B = Mathf.Asin(tempz / r);
         float A = Mathf.Asin(tempy / r / Mathf.Cos(B));
+        float A1 = Mathf.Acos(tempx / r / Mathf.Cos(B));
 
-        if (A < 0) { A += 2 * Mathf.PI; }
+        if (A>0)
+        {
+            if ((Mathf.PI - A) == A1 || (Mathf.PI - A) == 2 * Mathf.PI - A1)
+                A = Mathf.PI - A;
+        } else if (A < 0) {
+            if ((A + 2 * Mathf.PI) == A1 || (A + 2 * Mathf.PI) == 2 * Mathf.PI - A1)
+                A = A + 2 * Mathf.PI;
+            else
+                A = Mathf.PI - A;
+        }
+
         //change to degree
         B = B/Mathf.PI * 180f;
         A = A/Mathf.PI * 180f;
@@ -69,7 +80,7 @@ public class MapDisplay : MonoBehaviour{
 
         result[0] = 88.2f - 88.2f / 24f * H;
         result[1] = -22.05f + 22.05f / 90f * B;
-      
+
         return result; 
 
     }
