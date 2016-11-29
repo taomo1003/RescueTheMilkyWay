@@ -88,6 +88,8 @@
     <Compile Include="Assets\FlyCam.cs" />
     <Compile Include="Assets\GalaxyBox1\examplescene.cs" />
     <Compile Include="Assets\InfinteStar.cs" />
+    <Compile Include="Assets\Intro_1_Interactive.cs" />
+    <Compile Include="Assets\Intro_1_TextManager.cs" />
     <Compile Include="Assets\MapDisplay.cs" />
     <Compile Include="Assets\OSVRUnity\Sample\Demo\Scripts\Managers\ColorManager.cs" />
     <Compile Include="Assets\OSVRUnity\Sample\Demo\Scripts\Objects\ColorChanger.cs" />
@@ -172,6 +174,7 @@
     <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
     <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
     <Compile Include="Assets\OVR\Scripts\Util\OVRWaitCursor.cs" />
+    <Compile Include="Assets\PlayVideo.cs" />
     <Compile Include="Assets\Reticle.cs" />
     <Compile Include="Assets\ScriptCaller.cs" />
     <Compile Include="Assets\Scripts\AutoRecenter.cs" />

@@ -8,7 +8,7 @@ public class MapDisplay : MonoBehaviour{
     public GameObject mainCam;
 
     private bool flickFlag = false;
-    public int flickRate = 10;
+    public int flickRate = 20;
 
     private int count = 0;
 
@@ -24,7 +24,8 @@ public class MapDisplay : MonoBehaviour{
         float[] position = getRA_Dec(mainCam.transform.position.x, mainCam.transform.position.y, -mainCam.transform.position.z);
         Dot.transform.localPosition = new Vector3(position[0], position[1], 0.0f);
 
-        if (Input.GetKeyDown(KeyCode.Tab)){
+        if (Input.GetKeyDown(KeyCode.Tab) || Input.GetButtonDown("Jump"))
+        {
             map.SetActive(true);
             flickFlag = true;
         }
@@ -40,7 +41,8 @@ public class MapDisplay : MonoBehaviour{
             count = 0;
         }
 
-        if (Input.GetKeyUp(KeyCode.Tab)){
+        if (Input.GetKeyUp(KeyCode.Tab) || Input.GetButtonUp("Jump"))
+        {
             map.SetActive(false);
             flickFlag = false;
         }
