@@ -88,11 +88,11 @@ public class WalkInConstellation : MonoBehaviour {
 
             Arrow.transform.position = smoothFac * Arrow.transform.position + moveArrowTo * (1 - smoothFac);
 
-            //if (distance(line[currentIndex].GetComponent<ConnectLine>().b, transform.position) < distanceToTrigger) {
-            //    starFindSound.PlayOneShot(starFindSound.clip, 0.7f);
-            //    line[currentIndex].SetActive(true);
-            //    currentIndex++;
-            //}
+            if (distance(line[currentIndex].GetComponent<ConnectLine>().b, transform.position) < distanceToTrigger) {
+                starFindSound.PlayOneShot(starFindSound.clip, 0.7f);
+                line[currentIndex].SetActive(true);
+                currentIndex++;
+            }
 
 
             //Only for Debug

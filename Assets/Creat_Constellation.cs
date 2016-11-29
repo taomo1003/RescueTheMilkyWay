@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using VRStandardAssets.Examples;
 
 public class Creat_Constellation : MonoBehaviour {
     // Use this for initialization
@@ -48,6 +49,9 @@ public class Creat_Constellation : MonoBehaviour {
                     sphere[Count].transform.position = new Vector3(tx * M, ty * M, tz * M);
                     sphere[Count].transform.localScale = new Vector3(scale, scale, scale);
                     current_star.Value.starObject = sphere[Count];
+
+                    sphere[Count].GetComponent<ExampleInteractiveItem>().StarInfo = current_star.Value;
+
                     Count++;
                     if (Count > N - 1) return;
                 }

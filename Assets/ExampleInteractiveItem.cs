@@ -16,6 +16,8 @@ namespace VRStandardAssets.Examples
         [SerializeField] public VRInteractiveItem m_InteractiveItem;
         [SerializeField] public Renderer m_Renderer;
         public GameObject explode;
+        public Star StarInfo;
+
         bool waitActive = false;
         bool canSwitch = false;
         private Text infoPan;
@@ -54,7 +56,7 @@ namespace VRStandardAssets.Examples
         {
             Debug.Log("Show over state");
             m_Renderer.material = m_OverMaterial;
-            infoPan.text = "Onthe pan";
+            infoPan.text = "Name: " + StarInfo.Name + "\nRA: " + StarInfo.RA + "\nDec: " + StarInfo.Dec +"\nMagnitude: " + StarInfo.abs_mag + "\nNotes: " + StarInfo.Notes;
         }
 
 
@@ -72,16 +74,8 @@ namespace VRStandardAssets.Examples
         {
             Debug.Log("Show click state");
             m_Renderer.material = m_ClickedMaterial;
-            //StartCoroutine(Wait());
-
+            
         }
-
-        //IEnumerator Wait()
-        //{
-        //    explode.SetActive(true);
-        //    yield return new WaitForSeconds(1.3f);
-        //    this.gameObject.SetActive(false);
-        //}
 
         //Handle the DoubleClick event
         private void HandleDoubleClick()
