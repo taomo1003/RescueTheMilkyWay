@@ -3,7 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 using System.IO;
 
-public class Select_Right_1 : MonoBehaviour {
+public class Select_Right_1 : MonoBehaviour
+{
 
     public Text[] texts;
     public int sel;
@@ -16,6 +17,11 @@ public class Select_Right_1 : MonoBehaviour {
     public bool active;
     public double up_bond;
     public double low_bond;
+
+    public bool push;
+
+    public WalkInConstellation Walk;
+    public show_panel panel;
 
     public Select_Left L;
 
@@ -37,10 +43,16 @@ public class Select_Right_1 : MonoBehaviour {
         {
             texts[tempi++].text = readerNAME.ReadLine();
         }
+
+
+        push = false;
     }
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetAxis("Fire1") == 0)
+            push = true;
+
         up_bond = (double)-44f - (1.0f - SB.value) * 81f * 88f;
         low_bond = up_bond - 6.5f * 88f;
         if (On)
@@ -80,12 +92,20 @@ public class Select_Right_1 : MonoBehaviour {
 
             if (Input.GetAxis("Fire2") > 0)
             {
-                last = sel;
+                texts[sel].color = Color.black;
                 sel = 0;
                 On = false;
                 L.On = true;
                 active = false;
             }
+
+            if (push && Input.GetAxis("Fire1") > 0)
+            {
+                panel.menu.enabled = false;
+                panel.active = false;
+                Walk.moveTo(texts[sel].text);
+            }
         }
     }
 }
+

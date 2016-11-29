@@ -67,6 +67,7 @@ public class Select_Left : MonoBehaviour {
                     R_1.sel = 0;
                     R_1.On = true;
                     R_1.active = true;
+                    R_1.push = false;
                 }
                 if (sel == 1)
                 {
@@ -74,6 +75,7 @@ public class Select_Left : MonoBehaviour {
                     R_2.sel = 0;
                     R_2.On = true;
                     R_2.active = true;
+                    R_2.push = false;
                 }
             }
 
