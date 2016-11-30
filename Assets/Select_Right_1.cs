@@ -84,7 +84,6 @@ public class Select_Right_1 : MonoBehaviour
             texts[last].color = Color.black;
             texts[sel].color = Color.red;
 
-            Debug.Log(texts[sel].transform.localPosition);
             if (texts[sel].transform.localPosition.y < low_bond)
                 SB.value -= scroll;
             if (texts[sel].transform.localPosition.y > up_bond)

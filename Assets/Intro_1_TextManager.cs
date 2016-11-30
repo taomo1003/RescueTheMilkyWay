@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Intro_1_TextManager : MonoBehaviour {
 
@@ -23,12 +24,19 @@ public class Intro_1_TextManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        if (count >= tutorial.Length || Input.GetKeyDown(KeyCode.J))
+        {
+            SceneManager.LoadScene("Intro_2_Movie");
+        }
+    }
 
     public void next() {
         count++;
         tu_text.text  = tutorial[count];
+        if (count>=tutorial.Length || Input.GetKeyDown(KeyCode.J))
+        {
+            SceneManager.LoadScene("Intro_2_Movie");
+        }
     }
 
     public void back()

@@ -54,9 +54,23 @@ namespace VRStandardAssets.Examples
         //Handle the Over event
         private void HandleOver()
         {
-            Debug.Log("Show over state");
             m_Renderer.material = m_OverMaterial;
-            infoPan.text = "Name: " + StarInfo.Name + "\nRA: " + StarInfo.RA + "\nDec: " + StarInfo.Dec +"\nMagnitude: " + StarInfo.abs_mag + "\nNotes: " + StarInfo.Notes;
+            string starNotes = "";
+            char[] tempchar = StarInfo.Notes.ToCharArray();
+            int tempcount = 0;
+            foreach(char i in tempchar)
+            {
+                if (tempcount == 20) {
+                    tempcount = 0;
+                    starNotes += "-\n";
+                }
+                tempcount++;
+                starNotes += i.ToString();
+            }
+
+            infoPan.text = "Name: " + StarInfo.Name + "\nRA: " + StarInfo.RA + "\nDec: " + StarInfo.Dec +"\nMagnitude: " + StarInfo.abs_mag + "\nNotes: " + starNotes;
+            
+            
         }
 
 

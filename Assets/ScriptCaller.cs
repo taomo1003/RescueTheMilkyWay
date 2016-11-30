@@ -15,7 +15,7 @@ public class ScriptCaller : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.U))
         {
-            GetComponent<WalkInConstellation>().startGame("Leo");
+            GetComponent<WalkInConstellation>().startGame("Sgr");
         }
 
         if (Input.GetKeyDown(KeyCode.Y))
@@ -23,9 +23,10 @@ public class ScriptCaller : MonoBehaviour {
             GetComponent<WalkInConstellation>().startGame("Gem");
         }
 
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.End))
         {
-            GetComponent<WalkInConstellation>().moveTo("Gem");
+            GetComponent<WalkInConstellation>().showAll();
         }
+
     }
 }

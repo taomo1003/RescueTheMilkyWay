@@ -3,6 +3,7 @@ using System.Collections;
 using System;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class WalkInConstellation : MonoBehaviour {
     private static Constellations cons;
@@ -24,6 +25,7 @@ public class WalkInConstellation : MonoBehaviour {
 
 
     public string constellation_Walk = "Lib";
+    public bool intro;
 
     private Star[] stars;
 
@@ -35,8 +37,11 @@ public class WalkInConstellation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        cons = Creat_Constellation.getConstellations();
-        
+        if (intro)
+            cons = Intro_2_Creat.getConstellations();
+        else
+            cons = Creat_Constellation.getConstellations();
+
         if (startGam && notInGame)
         {
             //new game
@@ -77,8 +82,8 @@ public class WalkInConstellation : MonoBehaviour {
 
 
         if (!notInGame && currentIndex<totalLines) {
-            countText.text = "Game Mode\nRescuing: " + constellation_Walk + "\nTotal Lines: " + (totalLines + 1) + "\nNext Star: " + stars[currentIndex].Name + "\nInfo:\nPosition: X:" + Mathf.Round(stars[currentIndex].location.x*100)/100 + " Y:" + Mathf.Round(stars[currentIndex].location.y*100)/100
-                 + " Z:" + Mathf.Round(stars[currentIndex].location.z*100)/100 + "\nDistance: " + Mathf.Round(distance(line[currentIndex].GetComponent<ConnectLine>().b, transform.position)*100)/200 +" Light Year(s)";
+            countText.text = "Line: " + constellation_Walk + "\nTotal Lines: <b><color=yellow>" + (totalLines + 1) + "</color></b>\nNext Star: <b><color=red>" + stars[currentIndex].Name + "</color></b>\nInfo:\nPosition: X:" + Mathf.Round(stars[currentIndex].location.x*100)/100 + " Y:" + Mathf.Round(stars[currentIndex].location.y*100)/100
+                 + " Z:" + Mathf.Round(stars[currentIndex].location.z*100)/100 + "\nDistance: <b><color=red>" + Mathf.Round(distance(line[currentIndex].GetComponent<ConnectLine>().b, transform.position)*100)/200 + "</color></b> Light Year(s)";
 
             var rot = Quaternion.LookRotation(line[currentIndex].GetComponent<ConnectLine>().b - transform.position);
             Arrow.transform.rotation = Quaternion.Slerp(Arrow.transform.rotation, rot, Time.deltaTime * 0.5f);
@@ -113,7 +118,7 @@ public class WalkInConstellation : MonoBehaviour {
             star.transform.localPosition = new Vector3(35.0f,-7.0f,-33.5f);
             star.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 
-            winText.text = "You made it!!!\nYou saved " + constellation_Walk + ".\nGo around to see what it is like.\nPress Q to quit Game Mode\nPress R to return to earth";
+            winText.text = "You made it!!!\nYou linked " + constellation_Walk + ".\nGo around to see what it is like.\nPress <b><color=red>X</color></b> to quit Game Mode\nPress <b><color=green>B</color></b> to return to earth";
             currentIndex = -1;
             totalLines = 0;
             Destroy(Arrow);
@@ -121,13 +126,16 @@ public class WalkInConstellation : MonoBehaviour {
             notInGame = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Q)) {
+        if (Input.GetKeyDown(KeyCode.Q)||Input.GetAxis("Fire3")>0) {
             Destroy(star);
             winText.text = "";
             transform.position = new Vector3(0f, 0f, 0f);
+            if (intro) {
+                SceneManager.LoadScene("Intro_2_Constellation");
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R)||Input.GetAxis("Fire2") > 0)
         {
             transform.position = new Vector3(0f, 0f, 0f);
         }
@@ -145,8 +153,19 @@ public class WalkInConstellation : MonoBehaviour {
     public void startGame(String consname) {
         if (notInGame)
         {
+            Constellation current_constellation;
+            try
+            {
+                cons.getConstellations().TryGetValue(consname, out current_constellation);
+            }
+            catch (Exception e)
+            {
+                Debug.Log("Too few stars generated in Constellation:" + consname);
+                return;
+            }
             constellation_Walk = consname;
             startGam = true;
+            
         }
         else {
             Debug.Log("Already in a game");
@@ -159,6 +178,36 @@ public class WalkInConstellation : MonoBehaviour {
         foreach (KeyValuePair<string, Star> current_star in current_constellation.stars) {
             transform.position = current_star.Value.starObject.transform.position;
             break;
+        }
+    }
+
+
+    public void showAll()
+    {
+        GameObject[] line = new GameObject[180];
+        int i = 0;
+        foreach (KeyValuePair<string, Constellation> current_constellation in cons.getConstellations())
+        {
+
+            foreach (Constellation.StarLine starLine in current_constellation.Value.topoMap)
+            {
+                try
+                {
+                    line[i] = (GameObject)Instantiate(Resources.Load("Line", typeof(GameObject)));
+
+                    Star tempStar;
+                    current_constellation.Value.stars.TryGetValue(starLine.starA, out tempStar);
+                    line[i].GetComponent<ConnectLine>().a = tempStar.starObject.transform.position;
+                    current_constellation.Value.stars.TryGetValue(starLine.starB, out tempStar);
+                    line[i].GetComponent<ConnectLine>().b = tempStar.starObject.transform.position;
+                    line[i].SetActive(true);
+                    i++;
+                }
+                catch (Exception e)
+                {
+                    continue;
+                }
+            }
         }
     }
 

@@ -53,9 +53,7 @@ namespace VRStandardAssets.Examples
         //Handle the Over event
         private void HandleOver()
         {
-            Debug.Log("Show over state");
             m_Renderer.material = m_OverMaterial;
-
         }
 
 
