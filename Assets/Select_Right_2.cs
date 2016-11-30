@@ -31,7 +31,7 @@ public class Select_Right_2 : MonoBehaviour
     {
         texts = GetComponentsInChildren<Text>();
         foreach (Text t in texts)
-            t.color = Color.black;
+            t.color = Color.white;
         sel = 0;
         last = 1;
         len = texts.Length;
@@ -43,7 +43,9 @@ public class Select_Right_2 : MonoBehaviour
         int tempi = 0;
         while (!readerNAME.EndOfStream)
         {
-            texts[tempi++].text = readerNAME.ReadLine();
+            texts[tempi].text = readerNAME.ReadLine();
+            texts[tempi].fontSize = 40;
+            tempi++;
         }
 
     }
@@ -82,7 +84,7 @@ public class Select_Right_2 : MonoBehaviour
                     }
                 }
             }
-            texts[last].color = Color.black;
+            texts[last].color = Color.white;
             texts[sel].color = Color.red;
 
             if (texts[sel].transform.localPosition.y < low_bond)

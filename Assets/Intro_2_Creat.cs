@@ -14,6 +14,8 @@ public class Intro_2_Creat : MonoBehaviour {
 
     public GameObject gb;
 
+
+    private bool FirstTimeGame = false;
     private static Constellations cons;
     void Start()
     {
@@ -84,8 +86,9 @@ public class Intro_2_Creat : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetAxis("Fire1") > 0){
+        if (Input.GetAxis("Fire1") > 0 && !FirstTimeGame){
             gb.GetComponent<WalkInConstellation>().startGame("UMa");
+            FirstTimeGame = true;
         }
     }
     public static Constellations getConstellations()

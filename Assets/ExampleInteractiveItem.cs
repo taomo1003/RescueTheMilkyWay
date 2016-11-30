@@ -68,7 +68,7 @@ namespace VRStandardAssets.Examples
                 starNotes += i.ToString();
             }
 
-            infoPan.text = "Name: " + StarInfo.Name + "\nRA: " + StarInfo.RA + "\nDec: " + StarInfo.Dec +"\nMagnitude: " + StarInfo.abs_mag + "\nNotes: " + starNotes;
+            infoPan.text = "Name: <b><color=red>" + StarInfo.Name + "</color></b>\nRA: " + StarInfo.RA + "\nDec: " + StarInfo.Dec +"\nMagnitude: " + StarInfo.abs_mag + "\nNotes: " + starNotes;
             
             
         }

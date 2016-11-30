@@ -122,7 +122,7 @@ public class WalkInConstellation : MonoBehaviour {
             currentIndex = -1;
             totalLines = 0;
             Destroy(Arrow);
-            transform.position = new Vector3(0f, 0f, 0f);
+            //transform.position = new Vector3(0f, 0f, 0f);
             notInGame = true;
         }
 

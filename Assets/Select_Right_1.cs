@@ -30,7 +30,7 @@ public class Select_Right_1 : MonoBehaviour
     {
         texts = GetComponentsInChildren<Text>();
         foreach (Text t in texts)
-            t.color = Color.black;
+            t.color = Color.white;
         sel = 0;
         last = 1;
         len = texts.Length;
@@ -41,7 +41,9 @@ public class Select_Right_1 : MonoBehaviour
         int tempi = 0;
         while (!readerNAME.EndOfStream)
         {
-            texts[tempi++].text = readerNAME.ReadLine();
+            texts[tempi].text = readerNAME.ReadLine();
+            texts[tempi].fontSize = 40;
+            tempi++;
         }
 
 
@@ -81,7 +83,7 @@ public class Select_Right_1 : MonoBehaviour
                     }
                 }
             }
-            texts[last].color = Color.black;
+            texts[last].color = Color.white;
             texts[sel].color = Color.red;
 
             if (texts[sel].transform.localPosition.y < low_bond)
@@ -91,7 +93,7 @@ public class Select_Right_1 : MonoBehaviour
 
             if (Input.GetAxis("Fire2") > 0)
             {
-                texts[sel].color = Color.black;
+                texts[sel].color = Color.white;
                 sel = 0;
                 On = false;
                 L.On = true;
@@ -100,6 +102,7 @@ public class Select_Right_1 : MonoBehaviour
 
             if (push && Input.GetAxis("Fire1") > 0)
             {
+                Debug.Log("Select_Right_1");
                 panel.menu.enabled = false;
                 panel.active = false;
                 Walk.moveTo(texts[sel].text);

@@ -47,7 +47,7 @@ public class show_panel : MonoBehaviour {
             RP2.SetActive(false);
             B2.SetActive(false);
         }
-        if (Input.GetAxis("Menu") > 0 && push)
+        if (Input.GetAxis("Fire2") > 0 && push)
         {
             active = !active;
             if (active)
@@ -62,7 +62,7 @@ public class show_panel : MonoBehaviour {
             push = !push;
         }
 
-        if (Input.GetAxis("Menu") == 0 && !push)
+        if (Input.GetAxis("Fire2") == 0 && !push)
             push = !push;
     }
 }

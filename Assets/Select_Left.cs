@@ -15,11 +15,13 @@ public class Select_Left : MonoBehaviour {
     public Select_Right_1 R_1;
     public Select_Right_2 R_2;
 
+    public WalkInConstellation Walk;
+
     // Use this for initialization
     void Start () {
         texts = GetComponentsInChildren<Text>();
         foreach (Text t in texts)
-            t.color = Color.black;
+            t.color = Color.white;
         sel = 0;
         last = 1;
         len = texts.Length;
@@ -55,7 +57,7 @@ public class Select_Left : MonoBehaviour {
                     }
                 }
             }
-            texts[last].color = Color.black;
+            texts[last].color = Color.white;
             texts[sel].color = Color.red;
 
             if (Input.GetAxis("Fire1") > 0)
@@ -76,6 +78,11 @@ public class Select_Left : MonoBehaviour {
                     R_2.On = true;
                     R_2.active = true;
                     R_2.push = false;
+                }
+
+                if (sel == 2)
+                {
+                    Walk.showAll();
                 }
             }
 
