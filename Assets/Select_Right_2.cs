@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.IO;
+using System;
 
 public class Select_Right_2 : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class Select_Right_2 : MonoBehaviour
     public bool move;
     public Scrollbar SB;
     public bool On;
-    public float scroll = (float)1 / 6;
+    public float scroll = (float)1 /8;
     public bool active;
     public double up_bond;
     public double low_bond;
@@ -26,12 +27,14 @@ public class Select_Right_2 : MonoBehaviour
 
     public Select_Left L;
 
+    private string[] cons_name;
     // Use this for initialization
     void Start()
     {
         texts = GetComponentsInChildren<Text>();
         foreach (Text t in texts)
             t.color = Color.white;
+        cons_name = new string[texts.Length];
         sel = 0;
         last = 1;
         len = texts.Length;
@@ -39,12 +42,23 @@ public class Select_Right_2 : MonoBehaviour
         On = false;
         active = false;
 
-        var readerNAME = new StreamReader(File.OpenRead(@"./Assets/ConstellationData/ConstellationCSV/ConstName_Lines"));
+        var readerNAME_1 = new StreamReader(File.OpenRead(@"./Assets/ConstellationData/ConstellationCSV/ConstName_Lines"));
+        var readerNAME = new StreamReader(File.OpenRead(@"./Assets/ConstellationData/ConstellationCSV/ConstName_Lines_full"));
+
         int tempi = 0;
         while (!readerNAME.EndOfStream)
         {
-            texts[tempi].text = readerNAME.ReadLine();
-            texts[tempi].fontSize = 40;
+            string tempString = readerNAME.ReadLine();
+            try
+            {
+                tempString = tempString.Substring(0, tempString.IndexOf("\\")) + "\n" + tempString.Substring(tempString.IndexOf("\\") + 2);
+            }
+            catch (Exception e)
+            {
+            }
+            texts[tempi].text = tempString;
+            cons_name[tempi] = readerNAME_1.ReadLine();
+            texts[tempi].fontSize = 36;
             tempi++;
         }
 
@@ -56,8 +70,8 @@ public class Select_Right_2 : MonoBehaviour
         if (Input.GetAxis("Fire1") == 0)
             push = true;
 
-        up_bond = (double)-44f - (1.0f - SB.value) * 6f * 88f;
-        low_bond = up_bond - 6f * 88f;
+        up_bond = (double)-44f - (1.0f - SB.value) * 8f * 88f;
+        low_bond = up_bond - 4f * 88f;
         if (On)
         {
             if (!move)
@@ -94,7 +108,7 @@ public class Select_Right_2 : MonoBehaviour
 
             if (Input.GetAxis("Fire2") > 0)
             {
-                texts[sel].color = Color.black;
+                texts[sel].color = Color.white;
                 sel = 0;
                 On = false;
                 L.On = true;
@@ -105,7 +119,8 @@ public class Select_Right_2 : MonoBehaviour
             {
                 panel.menu.enabled = false;
                 panel.active = false;
-                Walk.startGame(texts[sel].text);
+                Walk.startGame(cons_name[sel]);
+                active = false;
             }
 
         }

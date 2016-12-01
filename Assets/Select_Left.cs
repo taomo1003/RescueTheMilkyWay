@@ -14,25 +14,39 @@ public class Select_Left : MonoBehaviour {
     public bool On;
     public Select_Right_1 R_1;
     public Select_Right_2 R_2;
+    public show_panel menu;
 
     public WalkInConstellation Walk;
 
+    public GameObject congrad_text;
+    public GameObject intro_text;
     // Use this for initialization
     void Start () {
         texts = GetComponentsInChildren<Text>();
         foreach (Text t in texts)
             t.color = Color.white;
+        texts[2].color = Color.gray;
+
         sel = 0;
         last = 1;
-        len = texts.Length;
+        len = 2;
         move = true;
         On = true;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (On)
+        if (On & menu.active)
         {
+
+            if (Walk.firstTimeFinish)
+            {
+                len = 3;
+                texts[2].color = Color.white;
+            }
+                
+
+
             if (!move)
                 if (Input.GetAxis("Vertical") == 0)
                     move = true;
@@ -83,6 +97,10 @@ public class Select_Left : MonoBehaviour {
                 if (sel == 2)
                 {
                     Walk.showAll();
+                    menu.menu.enabled = false;
+                    menu.active = false;
+                    intro_text.SetActive(false);
+                    congrad_text.SetActive(true);
                 }
             }
 

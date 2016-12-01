@@ -13,7 +13,7 @@ public class Select_Right_1 : MonoBehaviour
     public bool move;
     public Scrollbar SB;
     public bool On;
-    public float scroll = (float)1 / 81;
+    public float scroll = (float)1 / 83;
     public bool active;
     public double up_bond;
     public double low_bond;
@@ -25,23 +25,27 @@ public class Select_Right_1 : MonoBehaviour
 
     public Select_Left L;
 
+    private string[] cons_name;
     // Use this for initialization
     void Start()
     {
         texts = GetComponentsInChildren<Text>();
         foreach (Text t in texts)
             t.color = Color.white;
+        cons_name = new string[texts.Length];
         sel = 0;
         last = 1;
         len = texts.Length;
         move = true;
         On = false;
         active = false;
-        var readerNAME = new StreamReader(File.OpenRead(@"./Assets/ConstellationData/ConstellationCSV/_names"));
+        var readerNAME_1 = new StreamReader(File.OpenRead(@"./Assets/ConstellationData/ConstellationCSV/_names"));
+        var readerNAME = new StreamReader(File.OpenRead(@"./Assets/ConstellationData/ConstellationCSV/_names_full"));
         int tempi = 0;
         while (!readerNAME.EndOfStream)
         {
             texts[tempi].text = readerNAME.ReadLine();
+            cons_name[tempi] = readerNAME_1.ReadLine();
             texts[tempi].fontSize = 40;
             tempi++;
         }
@@ -55,8 +59,8 @@ public class Select_Right_1 : MonoBehaviour
         if (Input.GetAxis("Fire1") == 0)
             push = true;
 
-        up_bond = (double)-44f - (1.0f - SB.value) * 81f * 88f;
-        low_bond = up_bond - 6.5f * 88f;
+        up_bond = (double)-44f - (1.0f - SB.value) * 83f * 88f;
+        low_bond = up_bond - 4f * 88f;
         if (On)
         {
             if (!move)
@@ -105,7 +109,8 @@ public class Select_Right_1 : MonoBehaviour
                 Debug.Log("Select_Right_1");
                 panel.menu.enabled = false;
                 panel.active = false;
-                Walk.moveTo(texts[sel].text);
+                Walk.moveTo(cons_name[sel]);
+                active = false;
             }
         }
     }

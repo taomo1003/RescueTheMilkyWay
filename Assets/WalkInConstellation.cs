@@ -16,7 +16,11 @@ public class WalkInConstellation : MonoBehaviour {
     public AudioSource starFindSound;
 
     private bool startGam = false;
-    private bool notInGame = true;
+    public bool notInGame = true;
+
+    public bool firstTimeFinish = false;
+
+    private bool notInCongradulation = false;
     private int currentIndex = -1;
     private GameObject[] line;
     private int totalLines = 0;
@@ -81,14 +85,16 @@ public class WalkInConstellation : MonoBehaviour {
         }
 
 
-        if (!notInGame && currentIndex<totalLines) {
+        if (!notInGame && currentIndex<totalLines && !notInCongradulation) {
             countText.text = "Line: " + constellation_Walk + "\nTotal Lines: <b><color=yellow>" + (totalLines + 1) + "</color></b>\nNext Star: <b><color=red>" + stars[currentIndex].Name + "</color></b>\nInfo:\nPosition: X:" + Mathf.Round(stars[currentIndex].location.x*100)/100 + " Y:" + Mathf.Round(stars[currentIndex].location.y*100)/100
                  + " Z:" + Mathf.Round(stars[currentIndex].location.z*100)/100 + "\nDistance: <b><color=red>" + Mathf.Round(distance(line[currentIndex].GetComponent<ConnectLine>().b, transform.position)*100)/200 + "</color></b> Light Year(s)";
 
             var rot = Quaternion.LookRotation(line[currentIndex].GetComponent<ConnectLine>().b - transform.position);
-            Arrow.transform.rotation = Quaternion.Slerp(Arrow.transform.rotation, rot, Time.deltaTime * 0.5f);
+            Arrow.transform.rotation = Quaternion.Slerp(Arrow.transform.rotation, rot, Time.deltaTime * 0.9f);
             Vector3 moveArrowTo = transform.position + cam.transform.forward * 15.0f + Vector3.up * 1.0f + Vector3.right * 3.0f;
 
+            Debug.Log(transform.position);
+            Debug.Log("move to :" + moveArrowTo);
             float smoothFac = 0.6f;
 
             Arrow.transform.position = smoothFac * Arrow.transform.position + moveArrowTo * (1 - smoothFac);
@@ -115,27 +121,30 @@ public class WalkInConstellation : MonoBehaviour {
             countText.text = "";
             star = (GameObject)Instantiate(Resources.Load(constellation_Walk, typeof(GameObject)));
             star.transform.SetParent(textParent, false);
-            star.transform.localPosition = new Vector3(35.0f,-7.0f,-33.5f);
-            star.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            star.transform.localPosition = new Vector3(-52.3f,137.6f,0.1f);
+            star.transform.localScale = new Vector3(3.5f, 3.5f, 0.5f);
 
             winText.text = "You made it!!!\nYou linked " + constellation_Walk + ".\nGo around to see what it is like.\nPress <b><color=red>X</color></b> to quit Game Mode\nPress <b><color=green>B</color></b> to return to earth";
             currentIndex = -1;
             totalLines = 0;
             Destroy(Arrow);
             //transform.position = new Vector3(0f, 0f, 0f);
-            notInGame = true;
+            notInCongradulation = true;
+
+            firstTimeFinish = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Q)||Input.GetAxis("Fire3")>0) {
+        if (notInCongradulation&&(Input.GetKeyDown(KeyCode.Q)||Input.GetAxis("Fire3")>0)) {
             Destroy(star);
             winText.text = "";
             transform.position = new Vector3(0f, 0f, 0f);
             if (intro) {
                 SceneManager.LoadScene("Intro_2_Constellation");
             }
+            notInGame = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.R)||Input.GetAxis("Fire2") > 0)
+        if ((Input.GetKeyDown(KeyCode.R)||Input.GetAxis("Fire2") > 0 )&& !notInGame)
         {
             transform.position = new Vector3(0f, 0f, 0f);
         }
@@ -165,7 +174,8 @@ public class WalkInConstellation : MonoBehaviour {
             }
             constellation_Walk = consname;
             startGam = true;
-            
+            notInCongradulation = false;
+
         }
         else {
             Debug.Log("Already in a game");

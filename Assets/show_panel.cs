@@ -11,9 +11,12 @@ public class show_panel : MonoBehaviour {
     public GameObject B2;
     public Select_Left L;
 
+    public WalkInConstellation walk;
+
     public Canvas menu;
     public bool active;
     public bool push;
+
 
 	// Use this for initialization
 	void Start () {
@@ -47,7 +50,7 @@ public class show_panel : MonoBehaviour {
             RP2.SetActive(false);
             B2.SetActive(false);
         }
-        if (Input.GetAxis("Fire2") > 0 && push)
+        if (Input.GetAxis("Fire2") > 0 && push && walk.notInGame)
         {
             active = !active;
             if (active)
