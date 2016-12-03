@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/CreatSphere.unity
+- path: Assets/Scenes/Intro_2_Movie.unity
   isLoaded: 1
   isActive: 1

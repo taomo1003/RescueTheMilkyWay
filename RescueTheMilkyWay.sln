@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RescueTheMilkyWay.CSharp.Plugins", "RescueTheMilkyWay.CSharp.Plugins.csproj", "{699DE15F-ED3D-CCAE-2231-8AA01A9919FC}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RescueTheMilkyWay.CSharp", "RescueTheMilkyWay.CSharp.csproj", "{DE91DE2A-40B6-A9B9-5D44-178172CD6CBB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RescueTheMilkyWay.CSharp.Editor", "RescueTheMilkyWay.CSharp.Editor.csproj", "{4E6DD907-8E36-2405-4314-C85543036F32}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{699DE15F-ED3D-CCAE-2231-8AA01A9919FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{699DE15F-ED3D-CCAE-2231-8AA01A9919FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{699DE15F-ED3D-CCAE-2231-8AA01A9919FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{699DE15F-ED3D-CCAE-2231-8AA01A9919FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DE91DE2A-40B6-A9B9-5D44-178172CD6CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DE91DE2A-40B6-A9B9-5D44-178172CD6CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE91DE2A-40B6-A9B9-5D44-178172CD6CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU

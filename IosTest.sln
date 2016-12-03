@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{C1DA4766-E17F-889F-95B3-D581AAADBC02}") = "IosTest", "Assembly-CSharp-firstpass.csproj", "{209751EB-9871-A6A7-85C4-A3FF875C432C}"
+EndProject
+Project("{C1DA4766-E17F-889F-95B3-D581AAADBC02}") = "IosTest", "Assembly-CSharp.csproj", "{7772CAEC-B0A9-8B3B-0379-27F2107795A9}"
+EndProject
+Project("{C1DA4766-E17F-889F-95B3-D581AAADBC02}") = "IosTest", "Assembly-CSharp-Editor.csproj", "{FE8DF99C-501B-B090-A3FA-8B35BF2C48F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{209751EB-9871-A6A7-85C4-A3FF875C432C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{209751EB-9871-A6A7-85C4-A3FF875C432C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{209751EB-9871-A6A7-85C4-A3FF875C432C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{209751EB-9871-A6A7-85C4-A3FF875C432C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7772CAEC-B0A9-8B3B-0379-27F2107795A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7772CAEC-B0A9-8B3B-0379-27F2107795A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7772CAEC-B0A9-8B3B-0379-27F2107795A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7772CAEC-B0A9-8B3B-0379-27F2107795A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8DF99C-501B-B090-A3FA-8B35BF2C48F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8DF99C-501B-B090-A3FA-8B35BF2C48F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8DF99C-501B-B090-A3FA-8B35BF2C48F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8DF99C-501B-B090-A3FA-8B35BF2C48F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
