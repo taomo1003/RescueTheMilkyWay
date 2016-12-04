@@ -159,7 +159,7 @@ public class WalkInConstellation : MonoBehaviour {
         transform.position = new Vector3(0f, 0f, 0f);
         if (intro)
         {
-            SceneManager.LoadScene("Intro_2_Constellation");
+            SceneManager.LoadScene("Intro_3");
         }
         notInGame = true;
     }
