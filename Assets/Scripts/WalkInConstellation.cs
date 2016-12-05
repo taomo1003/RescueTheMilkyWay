@@ -28,6 +28,7 @@ public class WalkInConstellation : MonoBehaviour {
     private GameObject Arrow;
     private GameObject star;
 
+    public GameObject BlackButton;
 
     public string constellation_Walk = "Lib";
     public bool intro;
@@ -35,6 +36,9 @@ public class WalkInConstellation : MonoBehaviour {
     private Star[] stars;
 
     public GameObject winButton;
+
+
+    private bool ButtenPressed = false;
 
     void Start () {
         //line = new GameObject[20];
@@ -112,10 +116,11 @@ public class WalkInConstellation : MonoBehaviour {
 
 
             //Only for Debug
-            if (Input.GetKeyDown(KeyCode.G)) {
+            if (Input.GetKeyDown(KeyCode.G)||ButtenPressed) {
                 starFindSound.PlayOneShot(starFindSound.clip, 0.7f);
                 line[currentIndex].SetActive(true);
                 currentIndex++;
+                ButtenPressed = false;
             }
 
 
@@ -139,6 +144,8 @@ public class WalkInConstellation : MonoBehaviour {
             notInCongradulation = true;
 
             firstTimeFinish = true;
+
+            BlackButton.SetActive(false);
         }
 
         if (notInCongradulation && (Input.GetKeyDown(KeyCode.Q)||Input.GetAxis("Fire3")>0)||CrossPlatformInputManager.GetButtonDown("X")) {
@@ -239,6 +246,11 @@ public class WalkInConstellation : MonoBehaviour {
                 }
             }
         }
+    }
+
+
+    public void PressButtonG() {
+        ButtenPressed = true;
     }
 
 }
