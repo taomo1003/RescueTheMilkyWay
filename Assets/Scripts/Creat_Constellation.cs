@@ -69,6 +69,7 @@ public class Creat_Constellation : MonoBehaviour {
                     line[i].SetActive(true);
                 }
                 catch (Exception e) {
+                    Debug.Log(e.Message);
                     continue;
                 }
             }

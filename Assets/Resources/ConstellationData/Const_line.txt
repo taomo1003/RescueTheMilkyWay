@@ -1,0 +1,154 @@
+﻿Aqr
+ε Aqr,μ Aqr
+μ Aqr,β Aqr
+β Aqr,ι Aqr
+β Aqr,α Aqr
+α Aqr,π Aqr
+π Aqr,ζ1 Aqr
+ζ1 Aqr,γ Aqr
+ζ1 Aqr,η Aqr
+γ Aqr,α Aqr
+α Aqr,θ Aqr
+θ Aqr,λ Aqr
+λ Aqr,τ2 Aqr
+τ2 Aqr,δ Aqr
+δ Aqr,ψ2 Aqr
+ψ2 Aqr,φ Aqr
+φ Aqr,λ Aqr
+ψ2 Aqr,88 Aqr
+ψ2 Aqr,98 Aqr
+Ari
+γ1 Ari,β Ari
+β Ari,α Ari
+α Ari,41 Ari
+Cnc
+α Cnc,δ Cnc
+δ Cnc,β Cnc
+δ Cnc,γ Cnc
+γ Cnc,ι Cnc A
+Cap
+ω Cap,ψ Cap
+ψ Cap,β1 Cap
+β1 Cap,α1 Cap
+α1 Cap,θ Cap
+θ Cap,γ Cap
+γ Cap,δ Cap
+δ Cap,ε Cap
+ε Cap,ζ Cap
+ζ Cap,ω Cap
+Gem
+1 Gem,η Gem
+η Gem,μ Gem
+μ Gem,ε Gem
+ε Gem,ν Gem A
+ε Gem,τ Gem
+τ Gem,θ Gem
+τ Gem,Castor A
+τ Gem,ι Gem
+ι Gem,υ Gem
+υ Gem,κ Gem
+υ Gem,Pollux
+υ Gem,δ Gem
+δ Gem,ζ Gem
+ζ Gem,γ Gem
+δ Gem,λ Gem
+λ Gem,ξ Gem
+Lib
+α2 Lib,β Lib
+β Lib,γ Lib
+γ Lib,α2 Lib
+γ Lib,υ Lib
+υ Lib,τ Lib
+α2 Lib,σ Lib
+Leo
+κ Leo,λ Leo
+κ Leo,μ Leo
+λ Leo,ε Leo
+ε Leo,μ Leo
+μ Leo,ζ Leo
+ζ Leo,γ1 Leo
+γ1 Leo,η Leo
+η Leo,Regulus
+η Leo,ε Leo
+η Leo,θ Leo
+θ Leo,δ Leo
+δ Leo,γ1 Leo
+δ Leo,Denebola
+Denebola,θ Leo
+θ Leo,ι Leo
+ι Leo,σ Leo
+Psc
+α Psc A,ε Psc
+ε Psc,ω Psc
+ω Psc,ι Psc
+ι Psc,θ Psc
+θ Psc,γ Psc
+γ Psc,κ Psc
+κ Psc,λ Psc
+λ Psc,ι Psc
+α Psc A,η Psc
+η Psc,φ Psc
+φ Psc,τ Psc
+τ Psc,υ Psc
+υ Psc,φ Psc
+Sgr
+μ Sgr,λ Sgr
+λ Sgr,δ Sgr
+δ Sgr,γ2 Sgr
+γ2 Sgr,ε Sgr
+ε Sgr,η Sgr
+ε Sgr,δ Sgr
+δ Sgr,φ Sgr
+φ Sgr,λ Sgr
+φ Sgr,σ Sgr
+σ Sgr,τ Sgr
+τ Sgr,ζ Sgr
+ζ Sgr,φ Sgr
+ζ Sgr,ε Sgr
+Sco
+G Sco,λ Sco
+λ Sco,υ Sco
+υ Sco,κ Sco
+κ Sco,ι1 Sco
+ι1 Sco,θ Sco
+θ Sco,η Sco
+η Sco,ζ2 Sco
+ζ2 Sco,μ1 Sco
+μ1 Sco,ε Sco
+ε Sco,τ Sco
+τ Sco,Antares A
+Antares A,σ Sco
+σ Sco,δ Sco
+δ Sco,π Sco
+π Sco,ρ Sco
+δ Sco,β1 Sco
+Tau
+ν Tau,ξ Tau
+ξ Tau,λ Tau
+λ Tau,γ Tau
+γ Tau,Aldebaran
+Aldebaran,ζ Tau
+γ Tau,ε Tau
+ε Tau,β Tau
+UMa
+η UMa,Mizar
+Mizar,ε UMa
+ε UMa,δ UMa
+δ UMa,γ UMa
+γ UMa,β UMa
+β UMa,α UMa
+Vir
+109 Vir,τ Vir
+τ Vir,ζ Vir
+ζ Vir,ι Vir
+ι Vir,μ Vir
+ζ Vir,γ Vir A
+γ Vir A,θ Vir
+θ Vir,Spica
+γ Vir A,δ Vir
+δ Vir,ε Vir
+γ Vir A,η Vir
+η Vir,β Vir
+β Vir,ν Vir
+ν Vir,ο Vir
+ο Vir,η Vir
